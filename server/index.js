@@ -5,7 +5,11 @@ const MychatappDBModel = require('./models/chatDBFile');
 
 const app = express();
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: ["https://deploy-mern-1whq.vercel.app"],
+    methods: ["POST","GET"],
+    credentials: true
+))
 
 mongoose.connect("mongodb://localhost:27017/MychatappDB");
 // mongoose.connect("mongodb://192.168.0.1:27017/MychatappDB");
