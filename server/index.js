@@ -11,7 +11,7 @@ app.use(cors({
     credentials: true
 ))
 
-mongoose.connect("mongodb://localhost:27017/MychatappDB");
+mongoose.connect("mongodb+srv://justhasim0:king12345king@thedb.m7fz0zt.mongodb.net/thedb?retryWrites=true&w=majority&appName=thedb");
 // mongoose.connect("mongodb://192.168.0.1:27017/MychatappDB");
 app.post("/login", (req,res) => { 
     const {email, password} = req.body;
